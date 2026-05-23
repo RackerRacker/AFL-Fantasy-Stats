@@ -1,0 +1,48 @@
+Pos,Num,Player,MT,Team,K,Avg,H,Avg,D,Avg,M,Avg,HO,Avg,T,Avg,FF,FA,G,Avg,B,SC,Rat,Avg
+1,5,Christian Petracca,1,Melbourne,21,21,18,18,39,39,3,3,0,0,4,4,2,0,2,2,1,13,139,139
+2,13,Clayton Oliver,1,Melbourne,14,14,19,19,33,33,4,4,0,0,10,10,2,1,1,1,1,7,138,138
+3,3,Christian Salem,1,Melbourne,22,22,5,5,27,27,7,7,0,0,7,7,2,0,1,1,0,6,133,133
+4,35,Caleb Daniel,1,Western Bulldogs,26,26,11,11,37,37,6,6,0,0,2,2,0,0,0,0,0,0,126,126
+5,4,Marcus Bontempelli,1,Western Bulldogs,13,13,12,12,25,25,4,4,0,0,6,6,0,3,3,3,0,18,108,108
+6,11,Jackson Macrae,1,Western Bulldogs,12,12,14,14,26,26,3,3,0,0,8,8,1,1,0,0,0,0,103,103
+7,11,Max Gawn,1,Melbourne,13,13,8,8,21,21,5,5,30,30,1,1,1,2,0,0,2,2,101,101
+8,21,Tom Liberatore,1,Western Bulldogs,10,10,13,13,23,23,3,3,0,0,8,8,2,1,0,0,0,0,96,96
+9,10,Angus Brayshaw,1,Melbourne,15,15,10,10,25,25,5,5,0,0,2,2,1,0,1,1,0,6,95,95
+10,1,Adam Treloar,1,Western Bulldogs,11,11,16,16,27,27,3,3,0,0,1,1,0,1,3,3,0,18,93,93
+11,30,Alex Neal-Bullen,1,Melbourne,11,11,13,13,24,24,5,5,0,0,2,2,0,0,1,1,1,7,89,89
+12,31,Bayley Fritsch,1,Melbourne,10,10,3,3,13,13,5,5,0,0,0,0,1,1,6,6,2,38,87,87
+13,7,Jack Viney,1,Melbourne,9,9,16,16,25,25,2,2,0,0,6,6,3,2,0,0,0,0,86,86
+14,6,Luke Jackson,1,Melbourne,5,5,8,8,13,13,3,3,16,16,5,5,1,0,1,1,0,6,83,83
+15,5,Josh Dunkley,1,Western Bulldogs,9,9,16,16,25,25,1,1,0,0,5,5,1,0,0,0,0,0,83,83
+16,6,Bailey Smith,1,Western Bulldogs,15,15,11,11,26,26,4,4,0,0,1,1,0,1,0,0,1,1,81,81
+17,37,Roarke Smith,1,Western Bulldogs,9,9,7,7,16,16,4,4,0,0,5,5,1,0,1,1,0,6,80,80
+18,31,Bailey Dale,1,Western Bulldogs,16,16,5,5,21,21,5,5,0,0,0,0,0,0,0,0,0,0,73,73
+19,50,Ben Brown,1,Melbourne,9,9,1,1,10,10,4,4,1,1,1,1,4,1,3,3,2,20,67,67
+20,44,Tim English,1,Western Bulldogs,9,9,4,4,13,13,3,3,12,12,2,2,2,0,0,0,1,1,67,67
+21,8,Stefan Martin,1,Western Bulldogs,4,4,10,10,14,14,2,2,18,18,3,3,2,2,0,0,0,0,64,64
+22,7,Lachlan Hunter,1,Western Bulldogs,11,11,5,5,16,16,3,3,0,0,1,1,1,1,1,1,1,7,61,61
+23,1,Steven May,1,Melbourne,13,13,1,1,14,14,5,5,0,0,1,1,0,0,0,0,0,0,60,60
+24,12,Zaine Cordy,1,Western Bulldogs,8,8,5,5,13,13,6,6,0,0,3,3,0,2,0,0,0,0,58,58
+25,15,Ed Langdon,1,Melbourne,11,11,6,6,17,17,2,2,0,0,0,0,0,0,1,1,1,7,58,58
+26,17,Jake Bowey,1,Melbourne,10,10,7,7,17,17,4,4,0,0,0,0,0,0,0,0,0,0,56,56
+27,8,Jake Lever,1,Melbourne,11,11,6,6,17,17,2,2,0,0,1,1,1,0,0,0,0,0,56,56
+28,15,Taylor Duryea,1,Western Bulldogs,7,7,9,9,16,16,4,4,0,0,2,2,2,2,0,0,0,0,55,55
+29,4,James Harmes,1,Melbourne,5,5,9,9,14,14,3,3,0,0,3,3,0,0,0,0,0,0,54,54
+30,39,Jason Johannisen,1,Western Bulldogs,7,7,5,5,12,12,4,4,0,0,1,1,0,0,1,1,0,6,53,53
+31,32,Tom Sparrow,1,Melbourne,7,7,7,7,14,14,1,1,0,0,3,3,0,1,1,1,0,6,53,53
+32,25,Tom McDonald,1,Melbourne,4,4,4,4,8,8,4,4,0,0,0,0,0,0,2,2,0,12,44,44
+33,10,Easton Wood,1,Western Bulldogs,4,4,5,5,9,9,4,4,0,0,3,3,0,1,0,0,0,0,43,43
+34,34,Bailey Williams,1,Western Bulldogs,8,8,5,5,13,13,3,3,0,0,0,0,0,0,0,0,0,0,43,43
+35,33,Aaron Naughton,1,Western Bulldogs,6,6,3,3,9,9,4,4,0,0,0,0,0,0,1,1,0,6,42,42
+36,24,Trent Rivers,1,Melbourne,4,4,7,7,11,11,2,2,0,0,2,2,0,0,0,0,0,0,40,40
+37,13,Josh Schache,1,Western Bulldogs,7,7,4,4,11,11,3,3,0,0,1,1,0,1,0,0,1,1,40,40
+38,42,Alex Keath,1,Western Bulldogs,8,8,5,5,13,13,5,5,0,0,0,0,0,3,0,0,0,0,40,40
+39,29,Mitch Hannan,1,Western Bulldogs,4,4,3,3,7,7,1,1,0,0,3,3,1,0,0,0,0,0,34,34
+40,19,Cody Weightman,1,Western Bulldogs,3,3,4,4,7,7,1,1,0,0,2,2,0,0,0,0,0,0,28,28
+41,9,Charlie Spargo,1,Melbourne,4,4,3,3,7,7,0,0,0,0,1,1,0,2,1,1,1,7,23,23
+42,35,Harrison Petty,1,Melbourne,3,3,3,3,6,6,1,1,0,0,2,2,1,2,0,0,0,0,21,21
+43,14,Michael Hibberd,1,Melbourne,3,3,4,4,7,7,1,1,0,0,0,0,0,0,0,0,0,0,20,20
+44,36,Kysaiah Pickett,1,Melbourne,2,2,2,2,4,4,0,0,0,0,3,3,0,1,0,0,0,0,19,19
+45,23,James Jordon,1,Melbourne,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+46,23,Laitham Vandermeer,1,Western Bulldogs,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Totals,,,46,,413,9,332,7.2,745,16.2,144,3.1,77,1.7,111,2.4,32,32,31,0.7,15,201,2993,65.1
