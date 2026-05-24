@@ -1,0 +1,99 @@
+---
+title: "AFL Fantasy Prediction Algorithm"
+output: html_document
+---
+
+### Fetch Libraries
+```{r}
+Sys.setenv(METNO_API_KEY = "dashiellbr@gmail.com")
+library(fitzRoy)
+library(dplyr)
+library(readr)
+library(stringr)
+library(tidyr)
+library(lubridate)
+library(weatherOz)
+
+setwd("~/Desktop/AFL Fantasy Stats/AFL Fixture")
+```
+
+### Weather
+```{r}
+get_venue_tz <- function(venue) {
+  if (venue %in% c("Perth Stadium", "Optus Stadium", "Hands Oval")) {
+    return("Australia/Perth")
+  } else if (venue %in% c("Adelaide Oval", "Norwood Oval", "Barossa Park", "Marrara Oval", "Traegar Park")) {
+    return("Australia/Adelaide")
+  } else if (venue %in% c("Gabba", "Carrara", "People First Stadium")) {
+    return("Australia/Brisbane")
+  } else {
+    return("Australia/Melbourne") # AEST covers VIC, NSW, TAS, ACT
+  }
+}
+
+# 1. Load the data
+upcoming_round <- fetch_fixture_squiggle(2026, 12)
+afl_ovals <- read.csv("AFL Ovals.csv")
+
+# 2. Join the upcoming round with stadium coordinates
+matches_with_weather <- upcoming_round %>%
+  inner_join(afl_ovals, by = c("venue" = "Stadium"))
+
+weather_results <- list()
+
+cat("Fetching forecasts for the upcoming round...\n")
+
+# 3. Loop through every match
+for (i in 1:nrow(matches_with_weather)) {
+  
+  match <- matches_with_weather[i, ]
+  
+  # FIX 1: Apply the correct local time zone for the specific stadium
+  venue_tz <- get_venue_tz(match$venue)
+  match_time_local <- ymd_hms(match$localtime, tz = venue_tz)
+  match_time_utc <- with_tz(match_time_local, tzone = "UTC")
+  
+  # Fetch forecast
+  forecast <- get_metno_forecast(
+    latitude = match$Latitude, 
+    longitude = match$Longitude
+  )
+  
+  # FIX 2: Find the CLOSEST available forecast time instead of demanding an exact match
+  match_weather <- forecast$data %>%
+    mutate(time_diff = abs(as.numeric(difftime(time, match_time_utc, units = "hours")))) %>%
+    arrange(time_diff) %>%
+    slice(1) # Grabs the single row with the smallest time difference
+  
+  # Build the final row
+  if(nrow(match_weather) > 0) {
+    
+    is_raining <- match_weather$precipitation_amount[1] > 0.5
+    
+    weather_results[[i]] <- data.frame(
+      Date = as.character(match_time_local),
+      Venue = match$venue,
+      Is_Raining = is_raining,
+      Temp_C = match_weather$air_temperature[1]
+    )
+    
+  } else {
+    weather_results[[i]] <- data.frame(
+      Date = as.character(match_time_local),
+      Venue = match$venue,
+      Is_Raining = NA,
+      Temp_C = NA
+    )
+  }
+}
+
+# Combine and print the clean table
+final_weather_table <- bind_rows(weather_results)
+print(final_weather_table)
+```
+
+### Game
+```{r}
+
+```
+

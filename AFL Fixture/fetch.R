@@ -13,12 +13,8 @@ player_stats_AFL_2025 <- fetch_player_stats(2025, comp = "AFLM", source = "AFL")
 player_stats_adltables_2025 <- fetch_player_stats(2025, comp = "AFLM", source = "afltables")
 
 
-clean_stats <- player_stats %>%
-  select(
-    
-  )
-
-fixture <- fetch_fixture(2020, comp = "AFLM")
+# Move positions from AFL -> adltables
+updated_player_stats_2025_df <- left_join(player_stats_adltables_2025, player_stats_AFL_2025, by="")
 
 # Save the selected data to a new variable
 clean_fixture <- fixture %>%
@@ -29,5 +25,12 @@ clean_fixture <- fixture %>%
 
 colnames(clean_fixture) <- c("Round", "Home", "Away", "Venue")
 
+head(player_stats_AFL_2025)
+clean_AFL_df <- player_stats_AFL_2025 %>%
+  select(
+    round.roundNumber, venue.name, home.team.club.name, away.team.club.name, player.jumperNumber, player.player.position,
+    player.player.player.givenName, player.player.player.surname
+  )
+
 # Write to CSV
-write.csv(clean_fixture, "C:/Users/dashi/Desktop/AFL-Fantasy-Stats/AFL Fixture/afl_fixture_2020.csv", row.names = FALSE)
+write.csv(clean_AFL_df, "player_stats_AFL.csv", row.names = FALSE)
